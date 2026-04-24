@@ -1,1 +1,70 @@
-{}
+{
+  "hot_lead": {
+    "input": {
+      "first_name": "Sarah",
+      "last_name": "Johnson",
+      "email": "sarah@techcorp.com",
+      "phone": "+1-555-0142",
+      "dial_code": "+1",
+      "country": "United States",
+      "form_source": "pricing_page_funnel"
+    },
+    "output": {
+      "classification": "HOT",
+      "confidence_score": 92,
+      "ai_response": {
+        "subject_line": "Sarah, let's get your funnels running this week!",
+        "email_body": "Hi Sarah, I noticed you were exploring our Pro pricing. I'd love to give you a quick 15-min walkthrough. Would tomorrow work?",
+        "cta_text": "Book My Demo",
+        "send_delay": "immediate"
+      },
+      "crm_actions": {
+        "add_to_list": "hot_leads",
+        "pipeline_stage": "qualified"
+      }
+    }
+  },
+  "warm_lead": {
+    "input": {
+      "first_name": "Rahul",
+      "email": "rahul.dev@gmail.com",
+      "dial_code": "+91",
+      "country": "India",
+      "form_source": "feature_page_funnel"
+    },
+    "output": {
+      "classification": "WARM",
+      "confidence_score": 55,
+      "ai_response": {
+        "subject_line": "Rahul, here's how KeaBuilder can help you grow",
+        "email_body": "Hi Rahul, one of our users in India grew leads by 3x using our AI funnels. Want to try?",
+        "cta_text": "Start Free Trial",
+        "send_delay": "1_hour"
+      },
+      "crm_actions": {
+        "add_to_list": "warm_leads",
+        "pipeline_stage": "nurture"
+      }
+    }
+  },
+  "cold_lead": {
+    "input": {
+      "email": "random123@yahoo.com",
+      "form_source": "blog_newsletter_signup"
+    },
+    "output": {
+      "classification": "COLD",
+      "confidence_score": 25,
+      "ai_response": {
+        "subject_line": "Welcome to KeaBuilder!",
+        "email_body": "Hey there! Here's our top post: 5 Funnel Mistakes That Kill Conversions",
+        "cta_text": "Read the Blog",
+        "send_delay": "24_hours"
+      },
+      "crm_actions": {
+        "add_to_list": "newsletter_subscribers",
+        "pipeline_stage": "awareness"
+      }
+    }
+  }
+}
